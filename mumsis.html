@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 50th Birthday, Mummy! | Odogwress' Golden Jubilee</title>
+    <meta name="description" content="A special 50th birthday celebration website for our beloved Mummy, Odogwress.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-gold">50</span> Odogwress
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#gallery" class="nav-link">Pictures</a></li>
+                <li><a href="#letter" class="nav-link">John's Letter</a></li>
+                <li><a href="#quotes" class="nav-link">Mummy Once Said</a></li>
+                <li><a href="#celebrate" class="nav-link">Celebrate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Floating Sparkles Background Overlay -->
+    <div class="stars-container" id="starsContainer"></div>
+
+    <main>
+        <!-- SECTION 1: WELCOME & HERO -->
+        <section id="hero" class="hero-section">
+            <div class="hero-backdrop"></div>
+            <div class="hero-container">
+                <div class="hero-badge">
+                    <span class="sparkle-icon">✨</span> THE QUEEN <span class="sparkle-icon">✨</span>
+                </div>
+                
+                <h1 class="hero-title">HAPPY 50TH BIRTHDAY, ODOGWRESS!</h1>
+                <p class="hero-subtitle">Celebrating 50 Years of Love, Grace, Strength and Beautiful Memories.</p>
+                
+                <div class="hero-image-wrapper">
+                    <div class="golden-crown-badge">👑</div>
+                    <div class="hero-image-frame">
+                        <img src="images/mummy-8.jpg" alt="Odogwress - The Birthday Queen" class="hero-img" id="heroImg">
+                        <div class="hero-50-badge">50</div>
+                    </div>
+                </div>
+
+                <p class="hero-tagline">To the Queen of Our Hearts, the Heartbeat of Our Home, and the One and Only Confirm Mummy.</p>
+                
+                <div class="hero-actions">
+                    <button class="btn btn-primary celebrate-btn" id="heroCelebrateBtn">
+                        <span class="btn-icon">🎉</span> Celebrate Mummy <span class="btn-sparkle">✨</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: INTERACTIVE PHOTO SHOWCASE -->
+        <section id="gallery" class="gallery-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">MEMORIES & GRACE</span>
+                    <h2 class="section-title">50 YEARS OF BEAUTY, LOVE & BEAUTIFUL MEMORIES</h2>
+                    <div class="gold-divider"><span>👑</span></div>
+                    <p class="section-description">Every picture tells a story. Every smile holds a memory. Every moment reminds us how blessed we are to have you.</p>
+                </div>
+
+                <!-- Central Interactive Photo Frame -->
+                <div class="gallery-wrapper">
+                    <div class="gallery-instruction">
+                        <span class="touch-icon">👆</span> Tap the photo to see more of the Odogwress👑
+                    </div>
+
+                    <div class="photo-card-container" id="photoCardContainer" tabindex="0" role="button" aria-label="Tap to show next photograph of Odogwress">
+                        <div class="sparkle-effect-overlay" id="sparkleOverlay"></div>
+                        <div class="photo-frame">
+                            <img src="images/mummy-8.jpg" alt="Mummy Odogwress" id="mainPhoto" class="main-photo">
+                            <div class="photo-badge">
+                                <span id="photoCounter">1 of 8</span>
+                            </div>
+                        </div>
+
+                        <div class="photo-caption-box">
+                            <p id="photoCaption" class="photo-caption">Our beautiful queen in full grace and elegance ❤️</p>
+                        </div>
+                    </div>
+
+                    <!-- Optional Navigation Controls -->
+                    <div class="gallery-controls">
+                        <button class="ctrl-btn" id="prevBtn" aria-label="Previous Photo">
+                            <span>❮</span> Previous
+                        </button>
+                        <button class="ctrl-btn btn-gold" id="nextBtn" aria-label="Next Photo">
+                            Next <span>❯</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: JOHN'S LETTER -->
+        <section id="letter" class="letter-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">FROM THE HEART</span>
+                    <h2 class="section-title">DUMEBI'S LETTER</h2>
+                    <div class="gold-divider"><span>💌</span></div>
+                </div>
+
+                <div class="letter-card-wrapper">
+                    <!-- Envelope / Closed State -->
+                    <div class="envelope-card" id="envelopeCard">
+                        <div class="envelope-header">
+                            <div class="envelope-stamp">
+                                <span>50th</span>
+                                <small>GOLDEN</small>
+                            </div>
+                            <div class="envelope-icon">✉️</div>
+                        </div>
+                        <h3 class="envelope-title">A Heartfelt Message for Mummy</h3>
+                        <p class="envelope-subtitle">Mummy, this one is from Bobo ❤️</p>
+                        <button class="btn btn-primary open-letter-btn" id="openLetterBtn">
+                            <span class="btn-icon">💌</span> Open My Letter
+                        </button>
+                    </div>
+
+                    <!-- Opened Letter State (Initially Hidden) -->
+                    <div class="letter-paper" id="letterPaper" style="display: none;">
+                        <div class="letter-header-decor">
+                            <span class="letter-crown">👑</span>
+                            <span class="letter-wax-seal">50</span>
+                        </div>
+                        
+                        <div class="letter-body">
+                            <p class="letter-salutation">Happy Birthday Odogwress👑 ,</p>
+                            
+                            <p>The Only Confirm Mummy , any other mummy is an otele . After you na you , Behind you na you , Beside you na you , Before you na still you .</p>
+                            
+                            <p>Today is all about celebrating you, your patience, your steady guidance, and the unconditional love you’ve poured into raising my siblings and I have shaped who we are today .</p>
+                            
+                            <p>You make the hard things in life look so easy, handling every problem with a level of grace, cool-head and strength that I admire more and more as time goes on. You truly are the heartbeat of our home.</p>
+                            
+                            <p>Thank you for every quiet sacrifice you’ve made behind the scenes, for being my constant source of comfort, and for believing in me even when I struggled to believe in myself.</p>
+                            
+                            <p>On your special day, I hope you take a moment to rest , see and feel just how deeply you are loved and appreciated.</p>
+                            
+                            <p>I pray this new year brings you abundant joy, good health, peace of mind and all the happiness you wish for.</p>
+                            
+                            <p class="letter-wishes">Happy 50th birthday Odogwress 🎂🎉💐 , YOU ARE 50 YEARS YOUNG😂😂 .</p>
+                            
+                            <div class="letter-signature">
+                                <span>With all my love,</span>
+                                <h3>Bobo</h3>
+                            </div>
+                        </div>
+
+                        <div class="letter-actions">
+                            <button class="btn btn-outline close-letter-btn" id="closeLetterBtn">
+                                <span>✉️</span> Close Letter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: MUMMY ONCE SAID -->
+        <section id="quotes" class="quotes-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">MEMORABLE & FUNNY CATCHPHRASES</span>
+                    <h2 class="section-title">MUMMY ONCE SAID</h2>
+                    <div class="gold-divider"><span>😂</span></div>
+                    <p class="section-description">Every legend has her signature lines. These are some of the unforgettable things only Mummy can say!</p>
+                </div>
+
+                <div class="quotes-wrapper">
+                    <!-- Unlock Button Banner -->
+                    <div class="quotes-unlock-banner" id="quotesUnlockBanner">
+                        <button class="btn btn-gold unlock-quotes-btn" id="unlockQuotesBtn">
+                            <span>🔓</span> Unlock Mummy's Quotes <span>✨</span>
+                        </button>
+                    </div>
+
+                    <!-- Quotes Grid Container (Initially Hidden/Interactive) -->
+                    <div class="quotes-grid" id="quotesGrid" style="display: none;">
+                        
+                        <div class="quote-card" tabindex="0">
+                            <span class="quote-number">01</span>
+                            <span class="quote-mark">“</span>
+                            <p class="quote-text">You like to fight , you like to fight .</p>
+                            <span class="quote-emoji">immune system😂🥊</span>
+                        </div>
+
+                        <div class="quote-card" tabindex="0">
+                            <span class="quote-number">02</span>
+                            <span class="quote-mark">“</span>
+                            <p class="quote-text">Pant , wear pant.</p>
+                            <span class="quote-emoji">a motherly advice to agunwa😂🩲</span>
+                        </div>
+
+                        <div class="quote-card" tabindex="0">
+                            <span class="quote-number">03</span>
+                            <span class="quote-mark">“</span>
+                            <p class="quote-text">So Elijah opened the window abii.</p>
+                            <span class="quote-emoji">una no go allow me forget that one🕊️</span>
+                        </div>
+
+                        <div class="quote-card" tabindex="0">
+                            <span class="quote-number">04</span>
+                            <span class="quote-mark">“</span>
+                            <p class="quote-text">Epukpa ooo.</p>
+                            <span class="quote-emoji">chaii,bobo has sufferd 🗣️</span>
+                        </div>
+
+                        <div class="quote-card" tabindex="0">
+                            <span class="quote-number">05</span>
+                            <span class="quote-mark">“</span>
+                            <p class="quote-text">Put it on my head .</p>
+                            <span class="quote-emoji">african mother 🤦‍♀️</span>
+                        </div>
+
+                        <div class="quote-card" tabindex="0">
+                            <span class="quote-number">06</span>
+                            <span class="quote-mark">“</span>
+                            <p class="quote-text">Bobo, leave fried yam.</p>
+                            <span class="quote-emoji">mummy,let the poor breathe😂😂🍠</span>
+                        </div>
+
+                        <div class="quote-card" tabindex="0">
+                            <span class="quote-number">07</span>
+                            <span class="quote-mark">“</span>
+                            <p class="quote-text">Mr Obionuto.</p>
+                            <span class="quote-emoji">a chieftancy title bestowed on bobo👑</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: FINAL BIRTHDAY CELEBRATION -->
+        <section id="celebrate" class="celebrate-section">
+            <div class="section-container text-center">
+                <div class="celebration-box">
+                    <div class="celebration-decor-top">🎂 🎉 🥂</div>
+                    <span class="section-tag">5 DECADES OF BEAUTY,RESILIENCE,EXCELLENCE </span>
+                    <h2 class="celebration-title">CHEERS TO 50 BEAUTIFUL YEARS</h2>
+                    
+                    <div class="final-photo-wrapper">
+                        <img src="images/mummy-1.jpg" alt="Mummy Odogwress Celebration" class="final-photo">
+                        <div class="golden-ring-shine"></div>
+                    </div>
+
+                    <p class="celebration-message">
+                        Happy 50th Birthday Mumsi,may the years ahead be filled with love, laughter, peace, good health, favour, and countless beautiful memories.
+                    </p>
+
+                    <div class="celebration-action">
+                        <button class="btn btn-celebrate" id="finalCelebrateBtn">
+                         LET'S CELEBRATE MY MUMSI.....THE ONE AND ONLY ODOGWRESS 👑 🎉
+                        </button>
+                    </div>
+
+                    <div class="final-love-note">
+                        <p>Mummy, you are deeply loved, endlessly appreciated, and truly one of a kind. Happy 50th birthday, Odogwress! ❤️</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>Designed with ❤️ for Mummy's 50th Birthday Golden Jubilee</p>
+            <p class="copyright">© 2026 Oboke dumebi . All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>
